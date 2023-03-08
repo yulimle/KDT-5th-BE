@@ -10,8 +10,11 @@ function buySync(item, price, quantity, callback) {
   }, 1000);
 }
 
-function pay(total) {
-  console.log(`${total} 원을 지불하였습니다.`);
-}
+// function pay(total) {
+//   console.log(`${total} 원을 지불하였습니다.`);
+// }
 
-buySync(`포켓몬빵`, 1000, 5, pay);
+// buySync(`포켓몬빵`, 1000, 5, pay);
+buySync('포켓몬빵', 1000, 5, function (total) {
+  console.log(`${total} 원을 지불하였습니다.`);
+});
